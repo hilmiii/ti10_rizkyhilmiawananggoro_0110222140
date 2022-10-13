@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body>
+    <div class="nav">
+        <table style="border: 1px solid black; border-collapse: collapse; border-color: black; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:auto; text-align: center;">
+            <tbody>
+                <tr>
+                    <td style="padding:20px;">Home |</td>
+                    <td style="padding:20px;">Generate Link |</td>
+                    <td style="padding:20px;">Transaction History |</td>
+                    <td style="padding:20px;">Policy |</td>
+                    <td style="padding:20px;">Logout</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="img" style="margin-top: 3%;">
+        <br><br>
+        <table style="padding-left:2%; padding-right:10%; float: left;">
+            <tr>
+                <td>
+                    <img src="img/swissarmy.png" alt="" style="width: 200px; height:200px; border: 1px solid black; border-collapse: collapse; border-color: black;">
+                    <br>
+                    <button type="submit">Upload Picture</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form">
+        <form action="hasil-pemesanan-barang.html">
+            <table style="float: center; padding-left:2%;">
+                <tbody>
+                    <tr>
+                        <td><label for="title">Title Here</label></td>
+                        <td>: <input type="text" id="title" placeholder="Title Here"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="desc">Description</label></td>
+                        <td>: <textarea name="" id="desc" cols="30" rows="10" placeholder="Year, Model, Condition"></textarea></td>
+                    </tr>
+                     <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="num">Account Number</label></td>
+                        <td>: <input type="number" id="num" placeholder="Account Number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="bank">Bank</label></td>
+                        <td>: <select name="" id="bank">
+                                <option value="">HSBC</option>
+                                <option value="">BRI</option>
+                                <option value="">BCA</option>
+                                <option value="">BNI</option>
+                                <option value="">CIMB Niaga</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="holder">Account Holder</label></td>
+                        <td>: <input type="text" id="holder" placeholder="Account Holder"></td>
+                    </tr>
+                     <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="trans">Transaction</label></td>
+                        <td>: 
+                            <select name="" id="trans">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>* if the transaction is for 3 person, choose from the drop-down list</td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" id="sendmobile">
+                            <label for="sendmobile">Send to Mobile Phone</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" id="sendemail">
+                            <label for="sendemail">Send to Email</label>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td><label for="mobile">Send to Mobile Phone</label></td>
+                        <td>: <input type="number" id="mobile" placeholder="Phone Number"></td>
+                    </tr>
+                     <tr>
+                        <td><label for="email">Send to Email</label></td>
+                        <td>: <input type="email" id="email" placeholder="Email Address"></td>
+                    </tr>
+                     <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <button type="submit" style="background-color: green; margin-left: 10px; margin-bottom: 10px;">Generate Link!</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="footer">
+                <footer>
+                    <hr>
+                </footer>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

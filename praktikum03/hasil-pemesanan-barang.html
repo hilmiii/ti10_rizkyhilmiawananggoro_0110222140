@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemesanan Barang</title>
+</head>
+<body>
+    <div class="nav">
+        <table style="border: 1px solid black; border-collapse: collapse; border-color: black; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:auto; text-align: center;">
+            <tbody>
+                <tr>
+                    <td style="padding:20px;">Home |</td>
+                    <td style="padding:20px;">Generate Link |</td>
+                    <td style="padding:20px;">Transaction History |</td>
+                    <td style="padding:20px;">Policy |</td>
+                    <td style="padding:20px;">Logout</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="img" style="margin-top: 3%;">
+        <br><br>
+        <table style="padding-left:2%; padding-right:10%; float: left;">
+            <tr>
+                <td>
+                    <img src="img/swissarmy.png" alt="" style="width: 200px; height:200px; border: 1px solid black; border-collapse: collapse; border-color: black;">
+                    <br>
+                    <button type="submit">Upload Picture</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form">
+        <form action="">
+            <table style="float: center; padding-left:2%;">
+                <tbody>
+                    <tr>
+                        <td><label for="title">Title Here</label></td>
+                        <td>: Victorinox $200</td>
+                    </tr>
+                    <tr>
+                        <td><label for="desc">Description</label></td>
+                        <td>: Year : 2022</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="padding-left: 10px;"> Model : Spartan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="padding-left: 10px;"> Condition : Mint</td>
+                    </tr>
+                     <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="num">Total Amount</label></td>
+                        <td>: $200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="payto">Pay to</label>
+                        </td>
+                        <td>: 123-456-789-0</td>
+                    </tr>
+                    <tr>
+                        <td><label for="type">Payment Type</label></td>
+                        <td>: <select name="" id="type">
+                                <option value="">Visa Debit</option>
+                                <option value="">Cash</option>
+                                <option value="">COD</option>
+                                <option value="">Retail</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="holder">Account Holder</label></td>
+                        <td>: <input type="text" id="holder" placeholder="Name Here"></td>
+                    </tr>
+                     <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ac-num">Account No</label>
+                        </td>
+                        <td>: <input type="number" placeholder="123-456-789-0"></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" id="sendmobile">
+                            <label for="sendmobile">Send to Mobile Phone</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" id="sendemail">
+                            <label for="sendemail">Send to Email</label>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td><label for="mobile">Send to Mobile Phone</label></td>
+                        <td>: <input type="number" id="mobile" placeholder="1234567890, 1234567891"></td>
+                    </tr>
+                     <tr>
+                        <td><label for="email">Send to Email</label></td>
+                        <td>: <input type="email" id="email" placeholder="mfmm2g13@soton.ac.uk, fys_06@yahoo.com"></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <button type="submit" style="background-color: green; margin-left: 10px; margin-bottom: 45%;">Pay using QuidLink!</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="footer">
+                <footer>
+                    <hr>
+                </footer>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
