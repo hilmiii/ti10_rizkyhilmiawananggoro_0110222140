@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    text-align: left;
+}
+
+nav{
+    background-color: pink;
+    height: 100vh;
+    flex: 1;
+    padding: 2vh;
+}
+main{
+    flex: 4;
+}
+
+main, header, footer{
+    background-color: bisque;
+    height: 15vh;
+}
+
+.main{
+    height: 70vh;
+    display: flex;
+}
+
+.main article{
+    flex: 3;
+    padding: 2vh;
+}
+
+.main aside{
+    background-color: aqua;
+    flex: 1;
+    padding: 2vh;
+}

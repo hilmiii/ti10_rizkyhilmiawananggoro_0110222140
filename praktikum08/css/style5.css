@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+
+img{
+    width: 20%;
+}
+
+body{
+        background-color: pink;
+}
+
+header, footer{
+    background-color: aqua;
+    height: 10vh;
+    margin: 20px;
+}
+
+main{
+    height: 70vh;
+    margin: 0 20px;
+    display: flex;
+}
+
+aside{
+    background-color: aquamarine;
+    flex: 1;
+    margin-right: 20px;
+}
+
+article{
+    background-color: rgb(243, 66, 66);
+    flex: 3;
+}
+
+article .text{
+    height: 30vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
