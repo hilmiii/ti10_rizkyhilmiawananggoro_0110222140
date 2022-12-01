@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Hilmiawan's Calculator</h1> <br> <br>  
+    <fieldset>  
+        <form name = "myform">  
+            <input type = "text" name = "input1"> <br/>  
+            <h4>+</h4>   
+            <input type="text" name="input2" onchange="calculate(this.value)"> <br/>  
+            <h4>=</h4> 
+            <input type="text" name="textbox5"/>  
+    </fieldset>  
+        </form>  
+
+    <script type = "text/javascript">  
+        function calculate() {   
+            if(isNaN(document.forms["myform"]["input1"].value) || document.forms["myform"]["input1"].value=="") {   
+                var text1 = 0;   
+            } else {   
+                var text1 = parseInt(document.forms["myform"]["input1"].value);   
+            }   
+            if(isNaN(document.forms["myform"]["input2"].value) || document.forms["myform"]["input2"].value=="") {   
+                var text2 = 0;   
+            } else {   
+                var text2 = parseFloat(document.forms["myform"]["input2"].value);   
+            }   
+            document.forms["myform"]["textbox5"].value = (text1+text2);   
+            }  
+    </script>  
+</body>
+</html>
