@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs-rupiah.html">Nomor 2</a></li>
+                <li><a href="">Nomor 3</a></li>
+                <li><a href="image-picker.html">Nomor 4</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <select name="" id="pilihan" onchange="cetakGambar()">
+        <option value="">----PILIH----</option>
+        <option value="bison">Bison</option>
+        <option value="gajah">Gajah</option>
+        <option value="gorila">Gorila</option>
+        <option value="macan">Macan</option>
+        <option value="singa">Singa</option>
+    </select>
+    <img id="image">
+
+    <script>
+        function cetakGambar(){
+            let dropdown = document.getElementById("pilihan").value;
+            let gambar = document.getElementById("image");
+
+            if(dropdown == "bison"){
+                alert("Ini gambar Bison");
+                gambar.setAttribute("src", "img/bison.jpg");
+            }
+            else if(dropdown == "gajah"){
+                alert("Ini gambar Gajah");
+                gambar.setAttribute("src", "img/gajah.jpg");
+            }
+            else if(dropdown == "gorila"){
+                alert("Ini gambar Gorila");
+                gambar.setAttribute("src", "img/gorila.jpg");
+            }
+            else if(dropdown == "macan"){
+                alert("Ini gambar Macan");
+                gambar.setAttribute("src", "img/macan.jpg");
+            }
+            else if(dropdown == "singa"){
+                alert("Ini gambar Singa");
+                gambar.setAttribute("src", "img/singa.jpg");
+            }else{
+                alert("Invalid Input");
+            }
+        }
+    </script>
+
+</body>
+</html>

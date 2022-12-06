@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+     <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs-rupiah.html">Nomor 2</a></li>
+                <li><a href="">Nomor 3</a></li>
+                <li><a href="image-picker.html">Nomor 4</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <fieldset>
+        <legend>Kurs Rupiah + Mata Uang Asing</legend>
+        <table>
+            <tr>
+                <td>Masukkan Nilai</td>
+                <td>Valas</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="bil">
+                </td>
+                <td>
+                    <select name="" id="mata_uang" onchange="hitungKurs()">
+                        <option value="">----PILIH----</option>
+                        <option value="USD">USD</option>
+                        <option value="SGD">SGD</option>
+                        <option value="RM">RM</option>
+                        <option value="YEN">YEN</option>
+                        <option value="EURO">EURO</option>
+                        <option value="RIYAL">RIYAL</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="hasil">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+    <script>
+        function hitungKurs(){
+            let bil = document.getElementById("bil").value;
+            let valas = document.getElementById("mata_uang").value;
+
+            if(valas == "USD"){
+                const dolar_us = 9915;
+                document.getElementById("hasil").value = "Rp. " + bil*dolar_us;
+            } else if(valas == "SGD"){
+                const dolar_singapura = 13472;
+                document.getElementById("hasil").value = "Rp. " + bil*dolar_singapura;
+            } else if(valas == "RM"){
+                const ringgit = 874;
+                document.getElementById("hasil").value = "Rp. " + bil*ringgit;
+            } else if(valas == "YEN"){
+                const yen = 120;
+                document.getElementById("hasil").value = "Rp. " + bil*yen;
+            } else if(valas == "EURO"){
+                const euro = 15888;
+                document.getElementById("hasil").value = "Rp. " + bil*euro; 
+            } else if(valas == "RIYAL"){
+                const riyal = 3592;
+                document.getElementById("hasil").value = "Rp. " + bil*riyal;
+            } else {
+                document.getElementById("hasil").value = "Invalid Currency";
+            }
+        }
+    </script>
+</body>
+</html>
