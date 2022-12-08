@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs-rupiah.html">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="image-picker.html">Nomor 4</a></li>
+                <li><a href="validation.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <form action="" name="myForm">
+                <label for="nama">Nama Pelanggan</label>
+                <input type="text" name="nama" id="nama" placeholder="Nama Anda">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="contoh@gmail.com">
+                <label for="jam">Jam Keberangkatan</label>
+                <input type="number" name="jam" id="jam" placeholder="0000 - 2359">
+                <label for="tujuan">Tujuan Keberangkatan</label>
+                <select name="tujuan" id="tujuan">
+                    <option value="" disabled selected hidden>Pilih Tujuan Anda</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bekasi">Bekasi</option>
+                    <option value="Bogor">Bogor</option>
+                    <option value="Depok">Depok</option>
+                    <option value="Bandung">Bandung</option>
+                </select>
+                <label for="jumlah">Jumlah Tiket</label>
+                <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah Tiket Anda (0 - 10)">
+                <br>
+                <button type="submit" value="submit" onclick="return(validateForm())">Submit</button>
+                <br>
+            </form>
+            <span id="namaOut"></span>
+            <br>
+            <span id="emailOut"></span>
+            <br>
+            <span id="jamOut"></span>
+            <br>
+            <span id="tujuanOut"></span>
+            <br>
+            <span id="jumlahOut"></span>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let jam = document.getElementById("jam").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let jumlah = document.getElementById("jumlah").value;
+            var mailformat = /^((?!\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$))/;
+
+            if( document.getElementById("nama").value == "" ) {
+            alert( "Harap Masukkan Nama Anda" );
+            document.getElementById("nama").focus() ;
+            return false;
+            }
+            else if(  document.getElementById("email").value == "" || document.getElementById("email").value.match(mailformat) ) {
+                alert( "Harap Masukkan Email Anda Dengan Benar!" );
+                document.getElementById("email").focus() ;
+                return false;
+            }
+            else if(  document.getElementById("jam").value == "" ||document.getElementById("jam").value > 2359 ||document.getElementById("jam").value < 4 || isNaN( document.getElementById("jam").value )) {          
+                alert( "Harap Masukkan Jam Keberangkatan Anda! (0000 - 2359)" );
+                document.getElementById("jam").focus() ;
+                return false;
+            }
+            else if( document.getElementById("tujuan").value == "" ) {
+                alert( "Harap Masukkan Tujuan Anda!" );
+                document.getElementById("tujuan").focus() ;
+                return false;
+            }
+            else if( document.getElementById("jumlah").value == "" || document.getElementById("jumlah").value > 10) {          
+                alert( "Harap Masukkan Jumlah Tiket Anda (0 - 10)" );
+                document.getElementById("jumlah").focus() ;
+                return false;    
+            }else{
+                document.getElementById("namaOut").innerHTML = "Nama : " + nama;
+                document.getElementById("emailOut").innerHTML ="Email : " + email;
+                document.getElementById("jamOut").innerHTML = "Jam : " + jam;
+                document.getElementById("tujuanOut").innerHTML = "Tujuan : " + tujuan;
+                document.getElementById("jumlahOut").innerHTML = "Jumlah : " + jumlah;
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
