@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-    color: rgb(177, 59, 59);
+    color: rgb(0, 60, 255);
 }
 
 i {
@@ -46,5 +46,5 @@ i {
     text-align: center;
 }
 #result {
-    color: rgb(177, 59, 59);
+    color:  rgb(0, 60, 255);
 }

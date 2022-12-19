@@ -20,21 +20,24 @@ function computerChoice(element){
 
     // Jika pilohan user == Komputer (draw)
     if(pilihanUser == pilihanKomputer){
-        alert("DRAW");
+        setTimeout(() => alert("DRAW"), 250);
     }
 
     // Jika Pilihan User Menang
     if(pilihanUser == "Rock" && pilihanKomputer == "Scissors"){
-        alert("USER WIN (Rock beat Scissors)");
+        setTimeout(() => alert("USER WIN (Rock beat Scissors)"), 250);
     } else if(pilihanUser == "Paper" && pilihanKomputer == "Rock"){
-        alert("USER WIN (Paper beat Rock)")
+        setTimeout(() => alert("USER WIN (Paper beat Rock)"), 250);
     } else if(pilihanUser == "Scissors" && pilihanKomputer == "Paper"){
-        alert("USER WIN (Scissors beat Paper)")
-    } else if(pilihanUser == "Scissors" && pilihanKomputer == "Rock"){
-        alert("USER LOST (Rock Beat Scissors)")
+        setTimeout(() => alert("USER WIN (Scissors beat Paper)"), 250);
+    }
+    
+    // Jika Pilihan User Kalah
+    else if(pilihanUser == "Scissors" && pilihanKomputer == "Rock"){
+        setTimeout(() => alert("USER LOST (Rock Beat Scissors)"), 250);
     } else if(pilihanUser == "Rock" && pilihanKomputer == "Paper"){
-        alert("USER LOST (Paper beat Rock)")
+        setTimeout(() => alert("USER LOST (Paper beat Rock)"), 250);
     } else if(pilihanUser == "Paper" && pilihanKomputer == "Scissors"){
-        alert("USER LOST (Scissors beat Paper)")
+        setTimeout(() => alert("USER LOST (Scissors beat Paper)"), 250);
     }
 }
